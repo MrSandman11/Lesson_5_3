@@ -1,5 +1,9 @@
 'use strict';
 const list = document.querySelector('.list');
+const newLiElemTextFunc = () => {
+  const newLiElemText = prompt('Добавьте строку в список');
+  return newLiElemText;
+};
 
 const del = () => {
   list.lastChild.remove();
@@ -19,7 +23,7 @@ const exit = (newLiElemText) => {
 };
 
 const createList = () => {
-  const newLiElemText = prompt('Добавьте строку в список');
+  const newLiElemText = newLiElemTextFunc();
   if (newLiElemText === 'del') {
     del();
   } else {
